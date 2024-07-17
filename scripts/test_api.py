@@ -1,7 +1,7 @@
 # scripts/test_api.py
-import requests
+import requests # type: ignore
 
-BASE_URL = 'http://localhost:5000'
+BASE_URL = 'http://localhost:3000'
 
 def test_get_appointments():
     response = requests.get(f'{BASE_URL}/appointments')

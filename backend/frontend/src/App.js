@@ -6,7 +6,7 @@ function App() {
   const [form, setForm] = useState({ patient_id: '', date: '', time: '' });
 
   useEffect(() => {
-    fetch('http://localhost:5000/appointments')
+    fetch('http://localhost:3000/appointments')
       .then(response => response.json())
       .then(data => setAppointments(data));
   }, []);
@@ -17,7 +17,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/appointments', {
+    fetch('http://localhost:3000/appointments', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
